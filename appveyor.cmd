@@ -10,10 +10,10 @@ dotnet test -c %_C% src\test\WixToolsetTest.WixCop
 
 dotnet publish -c %_C% -o %_P%\dotnet-wix\ -f netcoreapp2.1 src\wix
 
-dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\ -f net461 -r win-x86 src\heat
-dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\ -f net461 -r win-x86 src\wix
-dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\ -f net461 -r win-x86 src\wixcop
-dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\ -f net461 -r win-x86 src\WixToolset.BuildTasks
+dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\heat\ -f net461 -r win-x86 src\heat
+dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\wix\ -f net461 -r win-x86 src\wix
+dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\wixcop\ -f net461 -r win-x86 src\wixcop
+dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x86\buildtasks\ -f net461 -r win-x86 src\WixToolset.BuildTasks
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x64\ -f net461 -r win-x64 src\heat
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x64\ -f net461 -r win-x64 src\wix
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\net461\x64\ -f net461 -r win-x64 src\wixcop

@@ -11,6 +11,7 @@
     <RuntimeIdentifier Condition=" '$(RuntimeIdentifier)'=='' and '$(TargetFramework)'!='netcoreapp2.1' ">win-x86</RuntimeIdentifier>
     <!-- https://github.com/Microsoft/msbuild/issues/2360 -->
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <AppConfig>app.config</AppConfig>
   </PropertyGroup>
 
   <PropertyGroup>
