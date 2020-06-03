@@ -32,4 +32,3 @@ artifacts:
   name: msi
 
 deploy: off
-test: off

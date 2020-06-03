@@ -6,8 +6,8 @@
 
 nuget restore
 
-dotnet test -c %_C% src\test\WixToolsetTest.BuildTasks
-dotnet test -c %_C% src\test\WixToolsetTest.WixCop
+dotnet build -c %_C% src\test\WixToolsetTest.BuildTasks
+dotnet build -c %_C% src\test\WixToolsetTest.WixCop
 
 dotnet publish -c %_C% -o %_P%\dotnet-wix\ -f netcoreapp2.1 src\wix
 
@@ -41,12 +41,12 @@ robocopy %_P%\WixToolset.MSBuild\separate\netcoreapp2.1\wixcop %_P%\WixToolset.M
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\ src\WixToolset.MSBuild
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\broken\net461\ -f net461 -r dne src\wix
 
-dotnet test -c %_C% src\test\WixToolsetTest.MSBuild
+dotnet build -c %_C% src\test\WixToolsetTest.MSBuild
 
 dotnet pack -c %_C% src\dotnet-wix
-rem dotnet pack -c %_C% src\WixToolset.MSBuild
+dotnet pack -c %_C% src\WixToolset.MSBuild
 
-rem msbuild -p:Configuration=%_C% .\src\ThmViewerPackage\ThmViewerPackage.wixproj
+msbuild -p:Configuration=%_C% .\src\ThmViewerPackage\ThmViewerPackage.wixproj
 
 @popd
 @endlocal
