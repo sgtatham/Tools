@@ -3,11 +3,6 @@
 #  Do NOT modify this file. Update the canonical version in Home\repo-template\src\appveyor.yml
 #  then update all of the repos.
 
-branches:
-  only:
-    - master
-    - develop
-
 image: Visual Studio 2019
 
 version: 0.0.0.{build}
@@ -36,7 +31,4 @@ artifacts:
 - path: build\Release\**\*.msi
   name: msi
 
-notifications:
-- provider: Slack
-  incoming_webhook:
-    secure: p5xuu+4x2JHfwGDMDe5KcG1k7gZxqYc4jWVwvyNZv5cvkubPD2waJs5yXMAXZNN7Z63/3PWHb7q4KoY/99AjauYa1nZ4c5qYqRPFRBKTHfA=
+deploy: off
