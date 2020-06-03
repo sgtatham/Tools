@@ -25,10 +25,10 @@ dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\tools\netcoreapp2.1\ -f netcor
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\ src\WixToolset.MSBuild
 dotnet publish -c %_C% -o %_P%\WixToolset.MSBuild\broken\net461\ -f net461 -r dne src\wix
 
-dotnet pack -c %_C% src\dotnet-wix
-dotnet pack -c %_C% src\WixToolset.MSBuild
-
 dotnet test -c %_C% src\test\WixToolsetTest.MSBuild
+
+dotnet pack -c %_C% src\dotnet-wix
+rem dotnet pack -c %_C% src\WixToolset.MSBuild
 
 rem msbuild -p:Configuration=%_C% .\src\ThmViewerPackage\ThmViewerPackage.wixproj
 
