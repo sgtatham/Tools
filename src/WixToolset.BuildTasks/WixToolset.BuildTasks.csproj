@@ -12,6 +12,7 @@
     <!-- https://github.com/Microsoft/msbuild/issues/2360 -->
     <PlatformTarget>AnyCPU</PlatformTarget>
     <AppConfig>app.config</AppConfig>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
   <PropertyGroup>
