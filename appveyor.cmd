@@ -2,7 +2,7 @@
 @pushd %~dp0
 @set _C=Release
 @set _P=%~dp0build\%_C%\publish
-@set _RCO=/S /R:1 /W:1 /NP
+@set _RCO=/S /R:1 /W:1 /NP /XO
 
 nuget restore
 
