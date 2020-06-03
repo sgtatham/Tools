@@ -30,7 +30,7 @@ dotnet pack -c %_C% src\WixToolset.MSBuild
 
 dotnet test -c %_C% src\test\WixToolsetTest.MSBuild
 
-msbuild -p:Configuration=%_C% .\src\ThmViewerPackage\ThmViewerPackage.wixproj
+rem msbuild -p:Configuration=%_C% .\src\ThmViewerPackage\ThmViewerPackage.wixproj
 
 @popd
 @endlocal
